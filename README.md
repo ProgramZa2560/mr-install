@@ -2,8 +2,10 @@
 
 หน้าเว็บสแตนด์อโลนสำหรับดาวน์โหลดแอป Android (APK) ของเจ้าของร้าน — deploy ผ่าน GitHub Pages
 
-- `install.html` — หน้าหลัก (การ์ด Android APK + การ์ดเว็บสำหรับลูกค้า)
+- `install.html` — หน้าหลัก (การ์ด Android APK เปิดผ่าน Chrome + การ์ดวิธีใช้ iOS ผ่าน Safari "เพิ่มไปยังหน้าจอโฮม")
 - `index.html` — redirect ไป install.html
+
+หมายเหตุ: ลูกค้าสั่งอาหารต้องสแกน QR ที่โต๊ะเท่านั้น (ผูก token กับร้าน/โต๊ะ) — หน้านี้ไม่มีลิงก์เปิดเว็บสั่งอาหารตรงๆ
 
 ## APK ดึงจากไหน
 GitHub Releases ของ repo `ProgramZa2560/restaurant_app` (ต้องเป็น **public**)
