@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ติดตั้งแอป MR — ระบบสั่งอาหาร QR</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍽️</text></svg>">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, "Segoe UI", Roboto, "Noto Sans Thai", sans-serif;
+      background: radial-gradient(1200px 600px at 50% -10%, #1c1917, #0c0a09 60%);
+      color: #e7e5e4; min-height: 100vh; padding: 48px 16px 40px;
+    }
+    .wrap { max-width: 880px; margin: 0 auto; text-align: center; }
+    .brand { color: #f97316; font-weight: 800; letter-spacing: 4px; font-size: 14px; }
+    h1 { font-size: 44px; margin: 6px 0 10px; color: #fafaf9; }
+    .sub { color: #a8a29e; font-size: 15px; line-height: 1.7; }
+    .sub b { color: #fdba74; }
+    .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 34px 0 16px; }
+    @media (max-width: 640px) { .grid { grid-template-columns: 1fr; } h1 { font-size: 34px; } }
+    .card {
+      background: rgba(255,255,255,.04); border: 1px solid rgba(255,255,255,.09);
+      border-radius: 16px; padding: 22px 20px; text-align: left;
+      backdrop-filter: blur(8px);
+    }
+    .card h2 { font-size: 18px; margin-bottom: 12px; color: #fafaf9; }
+    .badge {
+      display: inline-block; background: #16a34a; color: #fff; font-size: 11px;
+      font-weight: 700; padding: 3px 10px; border-radius: 999px; margin-left: 8px; vertical-align: 2px;
+    }
+    .card ol { margin: 0 0 16px 18px; font-size: 14px; color: #d6d3d1; line-height: 1.9; }
+    .btn {
+      display: inline-block; width: 100%; text-align: center; padding: 13px 20px;
+      border-radius: 12px; font-size: 16px; font-weight: 700; text-decoration: none;
+      transition: filter .15s;
+    }
+    .btn:hover { filter: brightness(1.1); }
+    .btn-orange { background: #f97316; color: #fff; }
+    .btn-purple { background: #7c3aed; color: #fff; }
+    .ver { font-size: 12.5px; color: #78716c; margin-top: 10px; }
+    .note {
+      margin: 20px auto 0; max-width: 720px; font-size: 12.5px; color: #a8a29e; line-height: 1.8;
+    }
+    .note b { color: #fbbf24; }
+    .foot { margin-top: 18px; font-size: 12px; color: #57534e; }
+    .foot a { color: #a8a29e; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="brand">ระบบสั่งอาหาร QR</div>
+    <h1>MR 🍽️</h1>
+    <p class="sub">
+      แอปสำหรับเจ้าของร้านอาหาร — จัดการเมนู · QR โต๊ะ · ออเดอร์เรียลไทม์ · สรุปยอดขาย<br>
+      ลูกค้าสแกน QR ที่โต๊ะแล้วสั่งอาหารได้ทันที ไม่ต้องเรียกพนักงาน
+    </p>
+
+    <div class="grid">
+      <div class="card">
+        <h2>📱 Android — ติดตั้งแอป (APK)</h2>
+        <ol>
+          <li>กดปุ่มดาวน์โหลดด้านล่าง</li>
+          <li>เปิดไฟล์ <b>app-release.apk</b> ที่กำลังโหลดมา</li>
+          <li>อนุญาต "ติดตั้งจากแหล่งที่ไม่รู้จัก" (ด้านล่าง)</li>
+          <li>ติดตั้ง → เปิดแอป → เข้าสู่ระบบด้วยบัญชีร้าน</li>
+        </ol>
+        <a class="btn btn-orange" id="dl"
+           href="https://github.com/ProgramZa2560/restaurant_app/releases/latest/download/app-release.apk">
+          ⬇️ ดาวน์โหลด APK (Android)
+        </a>
+        <p class="ver" id="ver">กำลังตรวจสอบเวอร์ชันล่าสุด…</p>
+      </div>
+
+      <div class="card">
+        <h2>🌐 สำหรับลูกค้าที่โต๊ะ <span class="badge">ไม่ต้องติดตั้ง</span></h2>
+        <ol>
+          <li>ลูกค้าสแกน QR Code ที่โต๊ะด้วยกล้อง</li>
+          <li>เปิดเว็บสั่งอาหารได้ทันที ทุกอุปกรณ์ (iPhone/Android)</li>
+          <li>เลือกเมนู → สั่ง → ดูสถานะออเดอร์สดๆ</li>
+        </ol>
+        <a class="btn btn-purple" href="https://restaurant.sittiporn-suks.com">
+          🚀 เปิดเว็บสั่งอาหาร
+        </a>
+        <p class="ver">ทดสอบระบบได้ทันที ไม่ต้อง login</p>
+      </div>
+    </div>
+
+    <p class="note">
+      ⚠️ หากติดตั้งหรือใช้ APK จากหน้านี้ จำเป็นต้องอนุญาตการติดตั้งจากแหล่งที่ไม่รู้จัก
+      แอปนี้เผยแพร่โดยผู้พัฒนาระบบ MR โดยตรง<br>
+      เวอร์ชันล่าสุดจะถูกอัปเดตอัตโนมัติเมื่อมีการ release ใหม่ผ่าน CI/CD
+    </p>
+    <p class="foot">
+      MR · ระบบสั่งอาหาร QR สำหรับร้านอาหาร · <a href="https://github.com/ProgramZa2560/restaurant_app/releases">ดู release ทั้งหมด</a>
+    </p>
+  </div>
+
+  <script>
+    fetch('https://api.github.com/repos/ProgramZa2560/restaurant_app/releases/latest')
+      .then(r => r.json())
+      .then(rel => {
+        const asset = (rel.assets || []).find(a => a.name.endsWith('.apk'));
+        if (!asset) return;
+        const mb = Math.round(asset.size / 1048576 * 10) / 10;
+        document.getElementById('ver').textContent =
+          'เวอร์ชัน ' + (rel.tag_name || '') + ' · ' + mb + ' MB · อัปเดต ' +
+          new Date(asset.updated_at).toLocaleDateString('th-TH');
+      })
+      .catch(() => {
+        document.getElementById('ver').textContent = 'ตรวจสอบเวอร์ชันไม่สำเร็จ (ยังโหลด APK ได้ปกติ)';
+      });
+  </script>
+</body>
+</html>
