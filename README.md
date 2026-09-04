@@ -3,9 +3,15 @@
 หน้าเว็บสแตนด์อโลนสำหรับดาวน์โหลดแอป Android (APK) ของเจ้าของร้าน — deploy ผ่าน GitHub Pages
 
 - `install.html` — หน้าหลัก (การ์ด Android APK เปิดผ่าน Chrome + การ์ดวิธีใช้ iOS ผ่าน Safari "เพิ่มไปยังหน้าจอโฮม")
+- `app/` — แอป MR เวอร์ชันเว็บ จาก **`flutter build web --release --base-href /mr-install/app/`** (ใช้ตัวเดียวกับแอปมือถือ ไม่ใช่เว็บ vanilla ของ restaurant_customer)
 - `index.html` — redirect ไป install.html
 
-หมายเหตุ: การสั่งอาหารต้องผูกกับร้าน/โต๊ะผ่าน token จาก QR — การ์ด "เปิดแอป MR ผ่านเว็บ" ใช้สำหรับเจ้าของร้านจัดการร้านผ่าน browser และเข้าถึงระบบ (การสั่งยังต้องสแกน QR ที่โต๊ะ)
+## อัปเดตเว็บแอป (app/)
+1. build: `flutter build web --release --base-href /mr-install/app/` (ใน restaurant_app)
+2. `rm -rf mr-install/app && cp -R restaurant_app/build/web mr-install/app`
+3. commit + push → Pages deploy เอง
+
+หมายเหตุ: การสั่งอาหารต้องผูกกับร้าน/โต๊ะผ่าน token จาก QR — เว็บแอปใช้ API production โดยตรง (CORS เปิด `*` ที่ backend)
 
 ## APK ดึงจากไหน
 GitHub Releases ของ repo `ProgramZa2560/restaurant_app` (ต้องเป็น **public**)
