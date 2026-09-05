@@ -4,7 +4,7 @@ importScripts('https://www.gstatic.com/firebasejs/10.14.1/firebase-app-compat.js
 importScripts('https://www.gstatic.com/firebasejs/10.14.1/firebase-messaging-compat.js');
 
 firebase.initializeApp({
-  apiKey: 'AIzaSyBz9_QqztBkUqsiyttpZxBf8H4gkIajF0Q',
+  apiKey: 'AIzaSyBz9_QqzlbKUqsiyttpZxBf8H4gkIajFOQ',
   authDomain: 'mr-restaurants.firebaseapp.com',
   projectId: 'mr-restaurants',
   storageBucket: 'mr-restaurants.firebasestorage.app',
