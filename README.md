@@ -5,7 +5,6 @@
 - `install.html` — หน้าหลัก (การ์ด Android APK เปิดผ่าน Chrome + การ์ดวิธีใช้ iOS ผ่าน Safari "เพิ่มไปยังหน้าจอโฮม")
 - `app/index.html` — หน้าเข้าเบาๆ (redirect ไป web/) — แชร์ลิงก์นี้: `.../mr-install/app/`
 - `app/web/` — ไฟล์แอปจริง จาก **`flutter build web --release --base-href /mr-install/app/web/`** (ใช้ตัวเดียวกับแอปมือถือ ไม่ใช่เว็บ vanilla ของ restaurant_customer)
-- `install.html` — หน้าหลัก (การ์ด Android APK เปิดผ่าน Chrome + การ์ดวิธีใช้ iOS ผ่าน Safari "เพิ่มไปยังหน้าจอโฮม")
 - `index.html` — redirect ไป install.html
 
 ## อัปเดตเว็บแอป (app/web/)
